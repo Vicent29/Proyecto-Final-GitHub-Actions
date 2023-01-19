@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: Checkout lint 
         uses: actions/checkout@v2
-        run: npm install
-        run: npm run lint
+      - run: npm install
+      - run: npm run lint
