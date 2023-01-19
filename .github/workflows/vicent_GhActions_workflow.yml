@@ -1,0 +1,13 @@
+name: Practica final GitHub Actions 
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  linter_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install
+      - run: npm run lint
