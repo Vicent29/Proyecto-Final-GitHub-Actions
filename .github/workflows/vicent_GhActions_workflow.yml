@@ -33,5 +33,5 @@ jobs:
       - name: upload artifac 
         uses: actions/upload-artifact@v3
         with:
-          name: update resukt.txt
+          name: update_result
           path: result.txt
