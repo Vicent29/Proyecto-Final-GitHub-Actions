@@ -35,3 +35,30 @@ jobs:
         with:
           name: update_result
           path: result.txt
+  
+  add_badge_job:
+    runs-on: ubuntu-latest
+    needs: [cypress_job]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Download Artifac
+        uses: actions/download-artifact@v3
+        with:
+          name: update_result
+      - name: Catch result cypress
+        run: echo "::set-output name=cypress_outcome::$(cat result.txt)"
+        id: result_cypress
+      - name: "Action Readme"
+        uses: ./.github/actions/cypress_action
+        with:
+          resultado_cypress: ${{ steps.result_cypress.outputs.cypress_outcome }}
+      - name: "Push Readme"
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "."
+          author_name: "Vicent Esteve Ferre"
+          author_email: "esteve.ferre.vicent@gmail.com"
+          message: "Add result Cypress in Readme"
+          push: true
+

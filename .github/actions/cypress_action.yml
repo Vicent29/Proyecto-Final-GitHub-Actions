@@ -1,0 +1,9 @@
+name: "Action Change Redme"
+description: "Action para cambair el Readme dependiendo del resultado de los test de cypress"
+inputs:
+  resultado_cypress:
+    description: "Resultado de los tests"
+    required: true
+runs:
+  using: "node16"
+  main: "dist/index.js"
