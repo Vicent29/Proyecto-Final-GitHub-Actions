@@ -50,7 +50,7 @@ jobs:
         run: echo "::set-output name=cypress_outcome::$(cat result.txt)"
         id: result_cypress
       - name: "Action Readme"
-        uses: ./.github/actions/cypress_action
+        uses: ./.github/actions
         with:
           resultado_cypress: ${{ steps.result_cypress.outputs.cypress_outcome }}
       - name: "Push Readme"
