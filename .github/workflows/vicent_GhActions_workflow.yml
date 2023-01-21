@@ -80,7 +80,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [linter_job,cypress_job,add_badge_job,deploy_job]
     steps:
-    - name: Checkout
+      - name: Checkout
         uses: actions/checkout@v3
       - name: Action Mailgun
         uses: ./.github/actions/noti_mailgun
