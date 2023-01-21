@@ -1,7 +1,7 @@
 name: "Action Send Noti Mailgun"
 description: "Action para enviar un mensaje con Mailgun de los reultados de los jobs"
 inputs:
- result_linter_job: 
+  result_linter_job: 
     description: "Resultado del job de Linter"
     required: true
   result_cypress_job:
