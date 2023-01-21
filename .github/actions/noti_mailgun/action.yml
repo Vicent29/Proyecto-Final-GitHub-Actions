@@ -19,7 +19,7 @@ inputs:
   DOMAIN: 
     description: "Domain de Maigun"
     required: true
-  destinatario:
+  DESTINATARIO:
     description: "Correo del destinatario que recibira la notificación"
     required: true
 runs:

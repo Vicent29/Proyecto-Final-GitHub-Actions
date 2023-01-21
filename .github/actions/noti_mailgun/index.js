@@ -3,7 +3,7 @@ const core = require("@actions/core");
 // Variables mailgun crear formulario
 var API_KEY_MAILGUN = core.getInput('API_KEY');
 var DOMAIN_MAILGUN = core.getInput('DOMAIN');
-let DESTINATARIO = core.getInput('destinatario');
+var DESTINATARIO = core.getInput('DESTINATARIO');
 
 const formData = require('form-data');
 const Mailgun = require('mailgun.js');
@@ -17,7 +17,7 @@ let result_add_badge_job = core.getInput('result_add_badge_job');
 let result_deploy_job = core.getInput('result_deploy_job');
 
 
-const asunto= "Resultado del workflow ejecutado"
+let asunto= "Resultado del workflow ejecutado"
 
 const body = `
     <div>

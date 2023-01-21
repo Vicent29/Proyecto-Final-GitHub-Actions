@@ -89,6 +89,6 @@ jobs:
           result_cypress_job: ${{needs.cypress_job.result}}
           result_add_badge_job: ${{needs.add_badge_job.result}}
           result_deploy_job: ${{needs.deploy_job.result}}
-          API_KEY: ${{secrets.MAILGUN_APIKEY}}
-          DOMAIN: ${{secrets.MAILGUN_DOMAIN}}
-          destinatario: ${{secrets.DESTINATARIO}}
+          API_KEY: ${{secrets.APIKEY_MAILGUN}}
+          DOMAIN: ${{secrets.DOMAIN_MAILGUN}}
+          DESTINATARIO: ${{secrets.DESTINATARIO}}

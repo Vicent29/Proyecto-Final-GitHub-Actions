@@ -4381,7 +4381,7 @@ const core = __nccwpck_require__(2777);
 // Variables mailgun crear formulario
 var API_KEY_MAILGUN = core.getInput('API_KEY');
 var DOMAIN_MAILGUN = core.getInput('DOMAIN');
-let DESTINATARIO = core.getInput('destinatario');
+var DESTINATARIO = core.getInput('DESTINATARIO');
 
 const formData = __nccwpck_require__(2430);
 const Mailgun = __nccwpck_require__(9241);
@@ -4395,7 +4395,7 @@ let result_add_badge_job = core.getInput('result_add_badge_job');
 let result_deploy_job = core.getInput('result_deploy_job');
 
 
-const asunto= "Resultado del workflow ejecutado"
+let asunto= "Resultado del workflow ejecutado"
 
 const body = `
     <div>
