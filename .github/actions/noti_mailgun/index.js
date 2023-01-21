@@ -1,8 +1,6 @@
-const core = require("@actions/core");
-
 // Variables mailgun crear formulario
-var API_KEY_MAILGUN = core.getInput('resultado_cypress');
-var DOMAIN_MAILGUN = core.getInput('resultado_cypress');
+var API_KEY_MAILGUN = process.env.resultado_cypress;
+var DOMAIN_MAILGUN = process.env.resultado_cypress;
 let DESTINATARIO = process.env.destinatario
 
 const formData = require('form-data');
@@ -11,10 +9,11 @@ const form_mailgun = new Mailgun(formData);
 const send_message = form_mailgun.client({ username: 'api', key: API_KEY_MAILGUN });
 
 //Variables de estado de los jobs
-let result_linter_job = "success";
-let resultado_cypress = "success";
-let result_add_badge_job = "success";
-let result_deploy_job = "success";
+let result_linter_job = process.env.result_linter_job;
+let resultado_cypress = process.env.result_cypress_job;
+let result_add_badge_job = process.env.result_add_badge_job;
+let result_deploy_job = process.env.result_deploy_job;
+
 
 const asunto= "Resultado del workflow ejecutado"
 

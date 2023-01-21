@@ -84,11 +84,11 @@ jobs:
         uses: actions/checkout@v3
       - name: Action Mailgun
         uses: ./.github/actions/noti_mailgun
-        with:
+        env:
           result_linter_job: ${{needs.linter_job.result}}
           result_cypress_job: ${{needs.cypress_job.result}}
           result_add_badge_job: ${{needs.add_badge_job.result}}
           result_deploy_job: ${{needs.deploy_job.result}}
           API_KEY: ${{secrets.MAILGUN_APIKEY}}
           DOMAIN: ${{secrets.MAILGUN_DOMAIN}}
-          destinatario: ${{secrets.destinatario}}
+          destinatario: ${{secrets.DESTINATARIO}}
