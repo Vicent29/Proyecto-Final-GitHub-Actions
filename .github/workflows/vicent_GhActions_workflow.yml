@@ -84,7 +84,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Action Mailgun
         uses: ./.github/actions/noti_mailgun
-        env:
+        with:
           result_linter_job: ${{needs.linter_job.result}}
           result_cypress_job: ${{needs.cypress_job.result}}
           result_add_badge_job: ${{needs.add_badge_job.result}}
