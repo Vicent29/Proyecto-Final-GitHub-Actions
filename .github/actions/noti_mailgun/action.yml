@@ -1,0 +1,27 @@
+name: "Action Send Noti Mailgun"
+description: "Action para enviar un mensaje con Mailgun de los reultados de los jobs"
+inputs:
+ result_linter_job: 
+    description: "Resultado del job de Linter"
+    required: true
+  result_cypress_job:
+    description: "Resultado del job de Cypress"
+    required: true
+  result_add_badge_job: 
+    description: "Resultado del job del Add Badge"
+    required: true
+  result_deploy_job:
+    description: "Resultado del job de Vercel"
+    required: true
+  API_KEY: 
+    description: "Api Key de Maigun"
+    required: true
+  DOMAIN: 
+    description: "Domain de Maigun"
+    required: true
+  destinatario:
+    description: "Correo del destinatario que recibira la notificación"
+    required: true
+runs:
+  using: "node16"
+  main: "dist/index.js"

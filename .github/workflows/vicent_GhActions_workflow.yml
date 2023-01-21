@@ -75,4 +75,18 @@ jobs:
             vercel-org-id: ${{ secrets.ORG_ID }}
             vercel-project-id: ${{ secrets.PROJECT_ID }}
             working-directory: ./
-
+  
+  notification_job:
+    runs-on: ubuntu-latest
+    needs: [cypress_job]
+    steps:
+      - name: Action Mailgun
+        uses: ./.github/actions/noti_mailgun
+        with:
+          result_linter_job: ${{needs.linter_job.result}}
+          result_cypress_job: ${{needs.cypress_job.result}}
+          result_add_badge_job: ${{needs.add_badge_job.result}}
+          result_deploy_job: ${{needs.deploy_job.result}}
+          API_KEY: ${{secrets.MAILGUN_APIKEY}}
+          DOMAIN: ${{secrets.MAILGUN_DOMAIN}}
+          destinatario: ${{secrets.destinatario}}
