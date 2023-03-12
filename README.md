@@ -49,7 +49,7 @@
 
     ![Img-12](./assets/11-foto.png)
 
-- Por último, en el “[index.js](https://github.com/Vicent29/Proyecto-Final-GitHub-Actions/blob/master/.github/actions/change_readme/index.js)” se encargará de leer y reescribir el [Readme](https://github.com/Vicent29/Proyecto-Final-GitHub-Actions/blob/master/README.md) dependiendo de una variable que contendrá el resultado de los test de cypress a partir de la variable del Workflow. Por otro lado instalaremos todas las dependencias necesarias (“`actions/core`”, “`actions/github`”, “`vercel/ncc`”)  y he compilado el “[index.js](https://github.com/Vicent29/Proyecto-Final-GitHub-Actions/blob/master/.github/actions/change_readme/index.js)”
+- Por último, en el “[index.js](https://github.com/Vicent29/Proyecto-Final-GitHub-Actions/blob/master/.github/actions/change_readme/index.js)” se encargará de leer y reescribir el [Readme](https://github.com/Vicent29/Proyecto-Final-GitHub-Actions/blob/master/README.md) dependiendo de una variable que contendrá el resultado de los test de cypress a partir de la variable del Workflow. Por otro lado instalaremos todas las dependencias necesarias (“`actions/core`”, “`actions/github`”, “`vercel/ncc`”)  y he compilado el “[index.js](https://github.com/Vicent29/Proyecto-Final-GitHub-Actions/blob/master/.github/actions/change_readme/index.js)”.
 
     ![Img-13](./assets/13-foto.png)
 
